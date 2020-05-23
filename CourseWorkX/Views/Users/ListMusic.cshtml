@@ -1,0 +1,90 @@
+﻿@model IEnumerable<CourseWorkX.Models.ListModel>
+
+@{
+    ViewBag.Title = "ListMusic";
+    Layout = "~/Views/Shared/user.cshtml";
+}
+
+<h2>ListMusic</h2>
+
+<p>
+    @using (Html.BeginForm("Search", "Users", FormMethod.Post))
+    {
+        <input type="text" name="search_box" id="search_box" />
+
+        <select name="search_by" id="search_by">
+            <option value="Last Name" selected>Last Name</option>
+            <option value="Title">Title</option>
+        </select>
+
+        <input type="submit" value="Search" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DVD_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Added)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Studio_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Producer_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DVD_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Added)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Studio_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Producer_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Issue", "Issue_DVD", new {  id=item.DVD_ID }) 
+        </td>
+    </tr>
+}
+
+</table>

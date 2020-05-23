@@ -1,0 +1,61 @@
+﻿@model IEnumerable<CourseWorkX.Models.UserViewModel>
+
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/user.cshtml";
+}
+
+<h2>UserList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DVD_On_Loan)
+        </th>
+        <th>
+            Message
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.First_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Last_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Role)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DVD_On_Loan)
+    </td>
+
+    @if (item.DVD_On_Loan > 5)
+    {
+        <td>
+            Number of DVD exceeded.
+        </td>
+    }
+    else
+    {
+        <td>DVD within limit.</td>
+    }
+
+</tr>
+}
+
+</table>

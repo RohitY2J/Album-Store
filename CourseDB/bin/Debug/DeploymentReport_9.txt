@@ -1,0 +1,24 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Cast_Details].[Movie_Role] is being dropped, data loss could occur.
+       The column [dbo].[Producer_Details].[Num_of_movie_by] is being dropped, data loss could occur.
+       The column [dbo].[Studio_Details].[Number_of_movies_by] is being dropped, data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[Cast_Details] (Table)
+       [dbo].[Producer_Details] (Table)
+       [dbo].[Studio_Details] (Table)
+
+** Supporting actions
+
+The column [dbo].[Cast_Details].[Movie_Role] is being dropped, data loss could occur.
+The column [dbo].[Producer_Details].[Num_of_movie_by] is being dropped, data loss could occur.
+The column [dbo].[Studio_Details].[Number_of_movies_by] is being dropped, data loss could occur.
+

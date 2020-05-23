@@ -1,0 +1,99 @@
+﻿@model IEnumerable<DataLibrary.Models.LoanModel>
+
+@{
+    ViewBag.Title = "Loan_History";
+    Layout = "~/Views/Shared/user.cshtml";
+}
+
+<h2>Loan_History</h2>
+
+<p>
+    @using (Html.BeginForm("Loan_History", "Users", FormMethod.Post))
+    {
+        <input type="text" name="search_box" id="search_box" />
+
+        <select name="search_by" id="search_by">
+            <option value="Last_Name" selected>Last Name</option>
+            <option value="Title">Title</option>
+        </select>
+
+        <input type="submit" value="Search" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Loan_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_out)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount_paid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_returned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Penalty_Charge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Loan_ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Date_out)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Amount_paid)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Date_returned)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Penalty_Charge)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.User_ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    @if (item.Date_returned == null)
+    {
+        <td>
+            @Html.ActionLink("Return", "Return_DVD", new { id = item.Loan_ID })
+        </td>
+    }
+    else
+    {
+        <td>
+            Returned
+        </td>
+    }
+</tr>
+}
+
+</table>

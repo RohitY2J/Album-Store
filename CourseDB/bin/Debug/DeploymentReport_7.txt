@@ -1,0 +1,41 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Cast_Details]
+       [dbo].[DVD_Detail]
+       [dbo].[Loan]
+       [dbo].[Member]
+       [dbo].[Producer_Details]
+       [dbo].[Studio_Details]
+       [dbo].[Users]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Cast_Details] (Table)
+       [dbo].[DVD_Detail] (Table)
+       [dbo].[Loan] (Table)
+       [dbo].[Member] (Table)
+       [dbo].[Producer_Details] (Table)
+       [dbo].[Studio_Details] (Table)
+       [dbo].[Users] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_dvd_cast] (Foreign Key)
+       [dbo].[FK_dvd_studio] (Foreign Key)
+       [dbo].[FK_dvd_producer] (Foreign Key)
+       [dbo].[FK_loan_dvd] (Foreign Key)
+       [dbo].[FK_loan_member] (Foreign Key)
+       [dbo].[FK_member] (Foreign Key)
+     Create
+       [dbo].[FK_dvd_cast] (Foreign Key)
+       [dbo].[FK_dvd_studio] (Foreign Key)
+       [dbo].[FK_dvd_producer] (Foreign Key)
+       [dbo].[FK_loan_dvd] (Foreign Key)
+       [dbo].[FK_loan_member] (Foreign Key)
+       [dbo].[FK_member] (Foreign Key)

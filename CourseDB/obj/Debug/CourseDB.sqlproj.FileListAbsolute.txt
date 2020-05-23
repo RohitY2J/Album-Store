@@ -1,0 +1,12 @@
+C:\Users\dell\source\repos\CourseDB\bin\Debug\CourseDB.dacpac
+C:\Users\dell\source\repos\CourseDB\bin\Debug\CourseDB.dll
+C:\Users\dell\source\repos\CourseDB\bin\Debug\CourseDB.pdb
+C:\Users\dell\source\repos\CourseDB\obj\Debug\CourseDB.dll
+C:\Users\dell\source\repos\CourseDB\obj\Debug\CourseDB.pdb
+C:\Users\dell\source\repos\CourseDB\obj\Debug\CourseDB.sqlprojAssemblyReference.cache
+C:\Users\dell\Downloads\MVC_Asp.Net-master\MVC_Asp.Net-master\CourseDB\bin\Debug\CourseDB.dacpac
+C:\Users\dell\Downloads\MVC_Asp.Net-master\MVC_Asp.Net-master\CourseDB\bin\Debug\CourseDB.dll
+C:\Users\dell\Downloads\MVC_Asp.Net-master\MVC_Asp.Net-master\CourseDB\bin\Debug\CourseDB.pdb
+C:\Users\dell\Downloads\MVC_Asp.Net-master\MVC_Asp.Net-master\CourseDB\obj\Debug\CourseDB.sqlprojAssemblyReference.cache
+C:\Users\dell\Downloads\MVC_Asp.Net-master\MVC_Asp.Net-master\CourseDB\obj\Debug\CourseDB.dll
+C:\Users\dell\Downloads\MVC_Asp.Net-master\MVC_Asp.Net-master\CourseDB\obj\Debug\CourseDB.pdb

@@ -1,0 +1,6 @@
+﻿ALTER TABLE [dbo].[DVD_Detail]
+	ADD CONSTRAINT [FK_dvd_studio]
+	FOREIGN KEY (Studio_ID)
+	REFERENCES [Studio_Details] (Studio_ID)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE;
